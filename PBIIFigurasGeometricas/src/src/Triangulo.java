@@ -81,7 +81,7 @@ public class Triangulo extends FiguraGeometrica implements Angulizable{
 	
 	public Boolean pudoCalcular() {
 		Boolean sePudo = false;
-		if (base>0 && altura>0 && lado1>0 && lado2>0 && lado3>0) {
+		if (base>0 && altura>0 && lado1>0 && lado2>0) {
 			sePudo=true;
 		} 
 		return sePudo;

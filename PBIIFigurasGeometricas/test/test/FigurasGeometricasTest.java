@@ -72,12 +72,9 @@ public class FigurasGeometricasTest {
 
 	@Test
 	public void queSePuedaCrearUnTrianguloRectangulo() {
-		Double base = 10.0;
-		Double altura = 20.0;
-		Double catetoOpuesto = 3.0;
-		Double catetoAdyacente = 8.0;
-		Double hipotenusa = 9.0;
-		TrianguloRectangulo nueva = new TrianguloRectangulo(base, altura, catetoOpuesto, catetoAdyacente, hipotenusa);
+		Double base = 3.0;
+		Double altura = 4.0;
+		TrianguloRectangulo nueva = new TrianguloRectangulo(base, altura);
 		assertNotNull(nueva);
 	}
 
@@ -102,7 +99,7 @@ public class FigurasGeometricasTest {
 		Circulo nueva = new Circulo(radio);
 		Double valorObtenido = nueva.calcularArea();
 		Double valorEsperado = 28.27;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
@@ -120,7 +117,7 @@ public class FigurasGeometricasTest {
 		Circulo nueva = new Circulo(radio);
 		Double valorObtenido = nueva.calcularPerimetro();
 		Double valorEsperado = 18.85;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
@@ -142,7 +139,7 @@ public class FigurasGeometricasTest {
 		Triangulo nueva = new Triangulo(base, altura, lado1, lado2, lado3);
 		Double valorObtenido = nueva.calcularArea();
 		Double valorEsperado = 100.0;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
@@ -167,7 +164,7 @@ public class FigurasGeometricasTest {
 		Triangulo nueva = new Triangulo(base, altura, lado1, lado2, lado3);
 		Double valorObtenido = nueva.calcularPerimetro();
 		Double valorEsperado = 33.0;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
@@ -190,7 +187,7 @@ public class FigurasGeometricasTest {
 		TrianguloEquilatero nueva = new TrianguloEquilatero(base, altura, lado);
 		Double valorObtenido = nueva.calcularArea();
 		Double valorEsperado = 100.0;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
@@ -211,7 +208,7 @@ public class FigurasGeometricasTest {
 		TrianguloEquilatero nueva = new TrianguloEquilatero(base, altura, lado);
 		Double valorObtenido = nueva.calcularPerimetro();
 		Double valorEsperado = 45.0;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
@@ -233,7 +230,7 @@ public class FigurasGeometricasTest {
 		TrianguloIsosceles nueva = new TrianguloIsosceles(base, altura, ladoRepetido, ladoDesigual);
 		Double valorObtenido = nueva.calcularArea();
 		Double valorEsperado = 100.0;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
@@ -245,7 +242,7 @@ public class FigurasGeometricasTest {
 		TrianguloIsosceles nueva = new TrianguloIsosceles(base, altura, ladoRepetido, ladoDesigual);
 		Double valorObtenido = nueva.calcularPerimetro();
 		Double valorEsperado = 14.0;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
@@ -258,7 +255,7 @@ public class FigurasGeometricasTest {
 		TrianguloEscaleno nueva = new TrianguloEscaleno(base, altura, lado1, lado2, lado3);
 		Double valorObtenido = nueva.calcularArea();
 		Double valorEsperado = 100.0;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
@@ -271,55 +268,45 @@ public class FigurasGeometricasTest {
 		TrianguloEscaleno nueva = new TrianguloEscaleno(base, altura, lado1, lado2, lado3);
 		Double valorObtenido = nueva.calcularPerimetro();
 		Double valorEsperado = 31.0;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
 	public void queSePuedaCalcularElAreaDelTrianguloRectangulo() {
-		Double base = 10.0;
-		Double altura = 20.0;
-		Double catetoOpuesto = 3.0;
-		Double catetoAdyacente = 8.0;
-		Double hipotenusa = 9.0;
-		TrianguloRectangulo nueva = new TrianguloRectangulo(base, altura, catetoOpuesto, catetoAdyacente, hipotenusa);
+		Double base = 3.0;
+		Double altura = 4.0;
+		TrianguloRectangulo nueva = new TrianguloRectangulo(base, altura);
 		Double valorObtenido = nueva.calcularArea();
-		Double valorEsperado = 100.0;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		Double valorEsperado = 6.0;
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
 	public void queNoSePuedaCalcularElAreaDelTrianguloRectanguloSiLaAlturaEsNegativa() {
-		Double base = 10.0;
-		Double altura = -20.0;
-		Double catetoOpuesto = 3.0;
-		Double catetoAdyacente = 8.0;
-		Double hipotenusa = 9.0;
-		TrianguloRectangulo nueva = new TrianguloRectangulo(base, altura, catetoOpuesto, catetoAdyacente, hipotenusa);
+		Double base = 3.0;
+		Double altura = -4.0;
+		TrianguloRectangulo nueva = new TrianguloRectangulo(base, altura);
 		nueva.calcularArea();
 		assertFalse(nueva.pudoCalcular());
 	}
 
 	@Test
 	public void queSePuedaCalcularElPerimetroDelTrianguloRectangulo() {
-		Double base = 10.0;
-		Double altura = 20.0;
-		Double catetoOpuesto = 3.0;
-		Double catetoAdyacente = 8.0;
-		Double hipotenusa = 9.0;
-		TrianguloRectangulo nueva = new TrianguloRectangulo(base, altura, catetoOpuesto, catetoAdyacente, hipotenusa);
+		Double base = 3.0;
+		Double altura = 4.0;
+		TrianguloRectangulo nueva = new TrianguloRectangulo(base, altura);
+		nueva.calcularHipotenusa();
 		Double valorObtenido = nueva.calcularPerimetro();
-		Double valorEsperado = 20.0;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		Double valorEsperado = 12.0;
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
 	public void queNoSePuedaCalcularElPerimetroDelTrianguloRectanguloSiAlgunLadoEsNegativo() {
-		Double base = 10.0;
-		Double altura = 20.0;
-		Double catetoOpuesto = 3.0;
-		Double catetoAdyacente = 8.0;
-		Double hipotenusa = -9.0;
-		TrianguloRectangulo nueva = new TrianguloRectangulo(base, altura, catetoOpuesto, catetoAdyacente, hipotenusa);
+		Double base = 3.0;
+		Double altura = -4.0;
+		TrianguloRectangulo nueva = new TrianguloRectangulo(base, altura);
+		nueva.calcularHipotenusa();
 		nueva.calcularPerimetro();
 		assertFalse(nueva.pudoCalcular());
 	}
@@ -331,7 +318,7 @@ public class FigurasGeometricasTest {
 		Rectangulo nueva = new Rectangulo(ancho, alto);
 		Double valorObtenido = nueva.calcularArea();
 		Double valorEsperado = 21.0;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
@@ -350,7 +337,7 @@ public class FigurasGeometricasTest {
 		Rectangulo nueva = new Rectangulo(ancho, alto);
 		Double valorObtenido = nueva.calcularPerimetro();
 		Double valorEsperado = 20.0;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
@@ -368,7 +355,7 @@ public class FigurasGeometricasTest {
 		Cuadrado nueva = new Cuadrado(lado);
 		Double valorObtenido = nueva.calcularArea();
 		Double valorEsperado = 9.0;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
@@ -385,7 +372,7 @@ public class FigurasGeometricasTest {
 		Cuadrado nueva = new Cuadrado(lado);
 		Double valorObtenido = nueva.calcularPerimetro();
 		Double valorEsperado = 12.0;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 
 	@Test
@@ -395,17 +382,24 @@ public class FigurasGeometricasTest {
 		nueva.calcularPerimetro();
 		assertFalse(nueva.pudoCalcular());
 	}
-	
+
 	@Test
 	public void queSePuedaCalcularUnAngulo() {
-		Double base = 10.0;
-		Double altura = 20.0;
-		Double catetoOpuesto = 4.0;
-		Double catetoAdyacente = 3.0;
-		Double hipotenusa = 5.0;
-		TrianguloRectangulo nueva = new TrianguloRectangulo(base, altura, catetoOpuesto, catetoAdyacente, hipotenusa);
-		Double valorObtenido = nueva.calcularAngulo(catetoOpuesto, catetoAdyacente);
-		Double valorEsperado = 53.13;
-		assertEquals(valorObtenido, valorEsperado, 0.01);
+		Double base = 3.0;
+		Double altura = 4.0;
+		TrianguloRectangulo nueva = new TrianguloRectangulo(base, altura);
+		Double valorObtenido = nueva.calcularAngulo(base, altura);
+		Double valorEsperado = 36.87;
+		assertEquals(valorEsperado, valorObtenido, 0.01);
+	}
+
+	@Test
+	public void queSePuedaCalcularLaHipotenusa() {
+		Double base = 3.0;
+		Double altura = 4.0;
+		TrianguloRectangulo nueva = new TrianguloRectangulo(base, altura);
+		Double valorObtenido = nueva.calcularHipotenusa();
+		Double valorEsperado = 5.00;
+		assertEquals(valorEsperado, valorObtenido, 0.01);
 	}
 }
